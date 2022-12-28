@@ -1,0 +1,145 @@
+[
+    {
+        "title": [
+            "\u201cThe world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.\u201d"
+        ],
+        "author": [
+            "Albert Einstein"
+        ],
+        "tags": [
+            "change",
+            "deep-thoughts",
+            "thinking",
+            "world"
+        ]
+    },
+    {
+        "title": [
+            "\u201cIt is our choices, Harry, that show what we truly are, far more than our abilities.\u201d"
+        ],
+        "author": [
+            "J.K. Rowling"
+        ],
+        "tags": [
+            "abilities",
+            "choices"
+        ]
+    },
+    {
+        "title": [
+            "\u201cThere are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.\u201d"
+        ],
+        "author": [
+            "Albert Einstein"
+        ],
+        "tags": [
+            "inspirational",
+            "life",
+            "live",
+            "miracle",
+            "miracles"
+        ]
+    },
+    {
+        "title": [
+            "\u201cThe person, be it gentleman or lady, who has not pleasure in a good novel, must be intolerably stupid.\u201d"
+        ],
+        "author": [
+            "Jane Austen"
+        ],
+        "tags": [
+            "aliteracy",
+            "books",
+            "classic",
+            "humor"
+        ]
+    },
+    {
+        "title": [
+            "\u201cImperfection is beauty, madness is genius and it's better to be absolutely ridiculous than absolutely boring.\u201d"
+        ],
+        "author": [
+            "Marilyn Monroe"
+        ],
+        "tags": [
+            "be-yourself",
+            "inspirational"
+        ]
+    },
+    {
+        "title": [
+            "\u201cTry not to become a man of success. Rather become a man of value.\u201d"
+        ],
+        "author": [
+            "Albert Einstein"
+        ],
+        "tags": [
+            "adulthood",
+            "success",
+            "value"
+        ]
+    },
+    {
+        "title": [
+            "\u201cIt is better to be hated for what you are than to be loved for what you are not.\u201d"
+        ],
+        "author": [
+            "Andr\u00e9 Gide"
+        ],
+        "tags": [
+            "life",
+            "love"
+        ]
+    },
+    {
+        "title": [
+            "\u201cI have not failed. I've just found 10,000 ways that won't work.\u201d"
+        ],
+        "author": [
+            "Thomas A. Edison"
+        ],
+        "tags": [
+            "edison",
+            "failure",
+            "inspirational",
+            "paraphrased"
+        ]
+    },
+    {
+        "title": [
+            "\u201cA woman is like a tea bag; you never know how strong it is until it's in hot water.\u201d"
+        ],
+        "author": [
+            "Eleanor Roosevelt"
+        ],
+        "tags": [
+            "misattributed-eleanor-roosevelt"
+        ]
+    },
+    {
+        "title": [
+            "\u201cA day without sunshine is like, you know, night.\u201d"
+        ],
+        "author": [
+            "Steve Martin"
+        ],
+        "tags": [
+            "humor",
+            "obvious",
+            "simile"
+        ]
+    }
+]
+
+
+author,tags,title
+Albert Einstein,"change,deep-thoughts,thinking,world",“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”
+J.K. Rowling,"abilities,choices","“It is our choices, Harry, that show what we truly are, far more than our abilities.”"
+Albert Einstein,"inspirational,life,live,miracle,miracles",“There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.”
+Jane Austen,"aliteracy,books,classic,humor","“The person, be it gentleman or lady, who has not pleasure in a good novel, must be intolerably stupid.”"
+Marilyn Monroe,"be-yourself,inspirational","“Imperfection is beauty, madness is genius and it's better to be absolutely ridiculous than absolutely boring.”"
+Albert Einstein,"adulthood,success,value",“Try not to become a man of success. Rather become a man of value.”
+André Gide,"life,love",“It is better to be hated for what you are than to be loved for what you are not.”
+Thomas A. Edison,"edison,failure,inspirational,paraphrased","“I have not failed. I've just found 10,000 ways that won't work.”"
+Eleanor Roosevelt,misattributed-eleanor-roosevelt,“A woman is like a tea bag; you never know how strong it is until it's in hot water.”
+Steve Martin,"humor,obvious,simile","“A day without sunshine is like, you know, night.”"
