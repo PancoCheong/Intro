@@ -1,28 +1,35 @@
-# ------------------------------------------ myproject\myproject\spiders\my_quotes_spider.py ------------------------------------------
+# ------------------------------------------ myproject\myproject\spiders\my_quotes_login_spider.py ------------------------------------------
 # -
 import scrapy
+from scrapy.http import FormRequest
+from scrapy.utils.response import open_in_browser   # open the response in Web Browser
+#-
 # import the data model defined in items.py on parent folder
 from ..items import MyprojectItem
 
 
 # our class must inherit from Spider
 class MyQuoteSpider(scrapy.Spider):
-    #- variables
-    #  scrapy.Spider expects these two variables
-    name = 'quotes'                                # name of our spider
-    start_urls =    ['http://quotes.toscrape.com'
+#- variables
+#  scrapy.Spider expects these two variables
+    name = 'quotes_login'                                # name of our spider, pagination
+    start_urls =    ['https://quotes.toscrape.com/login'
                     ]                                              # list of URLs to scrap
-# -
 #- functions
-
     def parse(self, response):                           # response - the webpage source code
-        # #       title = response.css('title').extract()        # get <title>Quotes to Scrape</title>
-        #         title = response.css('title::text').extract()  # get the text from <title>Quotes to Scrape</title> using CSS selector
-        #         yield {'mytitletext' : title}                  # yield functions expects dictionary
-        #                                                        #     yield - like a return keyword of a function, commonly used in generator
-        #                                                        #     Scrapy uses generator behind the scene
-        # - use data model
-        # initialize an object of MyprojectItem class
+        token = response.css('form input::attr(value)').extract_first()
+        print('csrf token:' + token)
+    #-
+        return FormRequest.from_response(response, formdata={
+            'csrf_token' : token,
+            'username': 'abc@xyz.net',
+            'password': '1234'
+        }, callback = self.start_scraping)      # what to do after the login
+#-
+#- scraping method
+    def start_scraping(self, response):
+        open_in_browser(response)
+#-
         items = MyprojectItem()
 # -
 #       all_div_quotes = response.css('div.quote')[0]            # [0] - get 1st record as a sample
@@ -42,17 +49,12 @@ class MyQuoteSpider(scrapy.Spider):
             items['tags'] = tags
             # every yield of the data, it sends to pipeline
             yield items
-
-            # yield {
-            #     'title' : title,
-            #     'author' : author,
-            #     'tags' : tags
-            # }
-
-# - follow next page link and extract content from it
+#-    
+    # - follow next page link and extract content from it
         next_page = response.css('li.next a::attr(href)').get()
         print(next_page)  # show the progress
 # -
         if next_page is not None:
-            # go to next page and use this parse() to extract content
-            yield response.follow(next_page, callback=self.parse)
+            # go to next page and use this start_scraping() to extract content
+            # just like a recursive method
+            yield response.follow(next_page, callback=self.start_scraping)
